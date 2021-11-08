@@ -10,7 +10,7 @@ import SpeedDialAction, { speedDialActionClasses as classes } from '@mui/materia
 describe('<SpeedDialAction />', () => {
   let clock;
   beforeEach(() => {
-    clock = useFakeTimers();
+    clock = useFakeTimers({ shouldClearNativeTimers: true });
   });
 
   afterEach(() => {

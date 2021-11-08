@@ -206,7 +206,7 @@ describe('<Popper />', () => {
   describe('prop: transition', () => {
     let clock;
     beforeEach(() => {
-      clock = useFakeTimers();
+      clock = useFakeTimers({ shouldClearNativeTimers: true });
     });
 
     afterEach(() => {
@@ -294,7 +294,7 @@ describe('<Popper />', () => {
   describe('display', () => {
     let clock;
     beforeEach(() => {
-      clock = useFakeTimers();
+      clock = useFakeTimers({ shouldClearNativeTimers: true });
     });
 
     afterEach(() => {

@@ -35,7 +35,7 @@ describe('<Tooltip />', () => {
   let clock;
   beforeEach(() => {
     testReset();
-    clock = useFakeTimers();
+    clock = useFakeTimers({ shouldClearNativeTimers: true });
   });
 
   afterEach(() => {

@@ -9,7 +9,7 @@ import { adapterToUse, createPickerRender } from '../internal/pickers/test-utils
 describe('<StaticDatePicker /> keyboard interactions', () => {
   let clock: ReturnType<typeof useFakeTimers>;
   beforeEach(() => {
-    clock = useFakeTimers();
+    clock = useFakeTimers({ shouldClearNativeTimers: true });
   });
   afterEach(() => {
     clock.restore();

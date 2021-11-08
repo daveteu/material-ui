@@ -575,7 +575,7 @@ describe('<MenuList> integration', () => {
     describe('time', () => {
       let clock;
       beforeEach(() => {
-        clock = useFakeTimers();
+        clock = useFakeTimers({ shouldClearNativeTimers: true });
       });
 
       afterEach(() => {

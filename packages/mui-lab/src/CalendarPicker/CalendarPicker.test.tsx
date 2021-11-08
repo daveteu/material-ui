@@ -8,7 +8,7 @@ import { adapterToUse, wrapPickerMount, createPickerRender } from '../internal/p
 describe('<CalendarPicker />', () => {
   let clock: SinonFakeTimers;
   beforeEach(() => {
-    clock = useFakeTimers();
+    clock = useFakeTimers({ shouldClearNativeTimers: true });
   });
   afterEach(() => {
     clock.restore();

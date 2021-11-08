@@ -32,7 +32,7 @@ describe('<Zoom />', () => {
     let clock;
 
     beforeEach(() => {
-      clock = useFakeTimers();
+      clock = useFakeTimers({ shouldClearNativeTimers: true });
     });
 
     afterEach(() => {

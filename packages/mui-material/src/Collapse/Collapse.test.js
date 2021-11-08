@@ -77,7 +77,7 @@ describe('<Collapse />', () => {
     const handleAddEndListener = spy();
 
     beforeEach(() => {
-      clock = useFakeTimers();
+      clock = useFakeTimers({ shouldClearNativeTimers: true });
       const renderProps = render(
         <Collapse
           addEndListener={handleAddEndListener}
@@ -149,7 +149,7 @@ describe('<Collapse />', () => {
     let clock;
 
     beforeEach(() => {
-      clock = useFakeTimers();
+      clock = useFakeTimers({ shouldClearNativeTimers: true });
     });
 
     afterEach(() => {

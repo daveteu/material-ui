@@ -43,7 +43,7 @@ const UncontrolledOpenDesktopDatePicker = (({
 describe('<DesktopDatePicker />', () => {
   let clock: SinonFakeTimers;
   beforeEach(() => {
-    clock = useFakeTimers();
+    clock = useFakeTimers({ shouldClearNativeTimers: true });
   });
   afterEach(() => {
     clock.restore();

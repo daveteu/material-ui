@@ -23,7 +23,7 @@ const defaultRangeRenderInput = (startProps: TextFieldProps, endProps: TextField
 describe('<DesktopDateRangePicker />', () => {
   let clock: SinonFakeTimers;
   beforeEach(() => {
-    clock = useFakeTimers();
+    clock = useFakeTimers({ shouldClearNativeTimers: true });
   });
   afterEach(() => {
     clock.restore();

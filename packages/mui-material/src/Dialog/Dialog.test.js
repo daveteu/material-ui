@@ -34,7 +34,7 @@ function clickBackdrop(view) {
 describe('<Dialog />', () => {
   let clock;
   beforeEach(() => {
-    clock = useFakeTimers();
+    clock = useFakeTimers({ shouldClearNativeTimers: true });
   });
 
   afterEach(() => {

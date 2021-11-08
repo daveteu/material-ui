@@ -11,7 +11,7 @@ import { wrapPickerMount, createPickerRender, adapterToUse } from '../internal/p
 describe('<DesktopTimePicker />', () => {
   let clock: ReturnType<typeof useFakeTimers>;
   beforeEach(() => {
-    clock = useFakeTimers();
+    clock = useFakeTimers({ shouldClearNativeTimers: true });
   });
 
   afterEach(() => {

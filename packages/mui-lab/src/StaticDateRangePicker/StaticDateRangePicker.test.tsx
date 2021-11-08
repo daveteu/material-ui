@@ -17,7 +17,7 @@ const defaultRangeRenderInput = (startProps: TextFieldProps, endProps: TextField
 describe('<StaticDateRangePicker />', () => {
   let clock: ReturnType<typeof useFakeTimers>;
   beforeEach(() => {
-    clock = useFakeTimers();
+    clock = useFakeTimers({ shouldClearNativeTimers: true });
   });
   afterEach(() => {
     clock.restore();

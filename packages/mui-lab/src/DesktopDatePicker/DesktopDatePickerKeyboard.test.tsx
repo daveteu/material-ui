@@ -28,7 +28,7 @@ function TestKeyboardDatePicker(
 describe('<DesktopDatePicker /> keyboard interactions', () => {
   let clock: ReturnType<typeof useFakeTimers>;
   beforeEach(() => {
-    clock = useFakeTimers();
+    clock = useFakeTimers({ shouldClearNativeTimers: true });
   });
   afterEach(() => {
     clock.restore();

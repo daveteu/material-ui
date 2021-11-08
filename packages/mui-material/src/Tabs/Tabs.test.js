@@ -440,7 +440,7 @@ describe('<Tabs />', () => {
     );
 
     beforeEach(() => {
-      clock = useFakeTimers();
+      clock = useFakeTimers({ shouldClearNativeTimers: true });
     });
 
     afterEach(() => {
@@ -521,7 +521,7 @@ describe('<Tabs />', () => {
     let clock;
 
     beforeEach(() => {
-      clock = useFakeTimers();
+      clock = useFakeTimers({ shouldClearNativeTimers: true });
     });
 
     afterEach(() => {
@@ -686,7 +686,7 @@ describe('<Tabs />', () => {
     let clock;
 
     beforeEach(() => {
-      clock = useFakeTimers();
+      clock = useFakeTimers({ shouldClearNativeTimers: true });
     });
 
     afterEach(() => {
@@ -735,7 +735,7 @@ describe('<Tabs />', () => {
     let clock;
 
     beforeEach(() => {
-      clock = useFakeTimers();
+      clock = useFakeTimers({ shouldClearNativeTimers: true });
     });
 
     afterEach(() => {
